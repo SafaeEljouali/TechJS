@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Book Tracker</title>
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold text-center mb-6">📚 Book Reading Tracker</h1>
+
+    <!-- FORM -->
+    <form id="bookForm" class="bg-white p-6 rounded shadow space-y-4">
+
+      <input id="title" class="w-full p-2 border rounded" placeholder="Book Title" required />
+      <input id="author" class="w-full p-2 border rounded" placeholder="Author" required />
+
+      <input id="pages" type="number" class="w-full p-2 border rounded" placeholder="Total Pages" required />
+      <input id="pagesRead" type="number" class="w-full p-2 border rounded" placeholder="Pages Read" required />
+
+      <input id="price" type="number" class="w-full p-2 border rounded" placeholder="Price" required />
+
+      <select id="status" class="w-full p-2 border rounded">
+        <option>Read</option>
+        <option>Re-read</option>
+        <option>DNF</option>
+        <option>Currently reading</option>
+        <option>Returned Unread</option>
+        <option>Want to read</option>
+      </select>
+
+      <select id="format" class="w-full p-2 border rounded">
+        <option>Print</option>
+        <option>PDF</option>
+        <option>Ebook</option>
+        <option>AudioBook</option>
+      </select>
+
+      <input id="suggestedBy" class="w-full p-2 border rounded" placeholder="Suggested by" />
+
+      <button class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">
+        Add Book
+      </button>
+    </form>
+
+    <!-- Book list -->
+    <div id="booksList" class="mt-8 space-y-4"></div>
+
+    <!-- Stats -->
+    <div id="stats" class="mt-6 p-4 bg-white rounded shadow"></div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>

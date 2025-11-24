@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1.text-2xl.mb-4 Hello #{user.username}, your Books:
+  ul.list-disc
+    each book in books
+      li #{book.title} — #{book.author}
+  a.mt-4.text-blue-600(href="/logout") Logout
